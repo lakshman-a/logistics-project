@@ -3,8 +3,8 @@ version: 0.2
 env:
     variables:
         S3_BUCKET: "demo-s3-logistics-app-static"
-APP_NAME: "logistics-web-app"
-BUILD_ENV : "prod"
+        APP_NAME: "logistics-web-app"
+        BUILD_ENV : "prod"
 
 phases:
   install:
