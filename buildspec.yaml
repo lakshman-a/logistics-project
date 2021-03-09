@@ -1,10 +1,4 @@
-version: 0.2
-
-env:
-    variables:
-        S3_BUCKET: "demo-s3-logistics-app-static"
-        APP_NAME: "logistics-web-app"
-        BUILD_ENV : "prod"
+version: 0.1
 
 phases:
   install:
@@ -25,16 +19,7 @@ phases:
     commands:
       # - echo testing...
       # - echo building...
-      - echo Build started on `date`
-      - ng build --$BUILD_ENV
-  post_build:
-    commands:
-        # Clear S3 bucket.
-        - aws s3 rm s3://$S3_BUCKET$ --recursive
-        - echo S3 bucket is cleared.
-        # Copy dist folder to S3 bucket, As of Angular 6, builds are stored inside an app folder in distribution and not at the root of the dist folder
-        - aws s3 cp dist s3://$S3_BUCKET/$APP_NAME --recursive
-        - echo Build completed on `date`
+      - ng build --prod
 artifacts:
   files:
     - "**/*"
