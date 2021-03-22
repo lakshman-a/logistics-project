@@ -1,0 +1,74 @@
+.bg-tracking {
+    background-image: url('/assets/pic-1.jpg');
+    height: 100%;
+    color: #fff;
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+}
+
+.home-menu-button {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    color: #fff;
+    padding: 5px 30px 5px 30px;
+    border-radius: 0px;
+    border-right: 1px solid #7a7a85;
+}
+
+.home-menu-button-2 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    color: #fff;
+    padding: 5px 30px 5px 30px;
+    border-radius: 0px;
+}
+
+.home-header-icon-a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    color: #8e9ba7;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.home-header-icon-span {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid #cdd4da;
+    width: 51px;
+    text-align: center;
+    color: #94949d;
+    font-weight: 400;
+}
+
+home-request-quote-btn {
+    position: relative;
+    background-color: #50b9ce !important;
+    color: white;
+    border-radius: 0px;
+    font-size: 14px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: right;
+    width: 228px;
+    text-align: center;
+    height: 100%;
+}
+
+home-request-quote-btn::after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid #ffffff;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid #ffffff;
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+

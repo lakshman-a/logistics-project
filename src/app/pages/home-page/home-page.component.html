@@ -1,0 +1,235 @@
+<div style="background: #eaedf0;position: relative;">
+    <!-- <div class="container"> -->
+    <div>
+        <div class="row" style="margin-right: -15px;margin-left: -15px;     padding-left: 85px;">
+
+            <!-- EMAIL US -->
+            <div class="col-md-3" style="    align-self: center;">
+                <img style="margin-left: 10px;margin-right: 10px;" src="./assets/icon-mail.png" alt="">
+                <span style="color: #2c3740;display: inline-block;margin-left: 9px;vertical-align: middle;font-size: 15px;
+                    letter-spacing: 0.1px;cursor: pointer;;background-color: transparent;">Email
+                    us at :
+                    <a style="color: #2c3740;line-height: 1;cursor: pointer;
+                    text-decoration: none;background-color: transparent;" href="mailto:info@hennex.com">
+                        hennexlogistics@gmail.com</a>
+                </span>
+
+
+            </div>
+
+            <!-- SOCIAL MEDIA & REQUEST A QUOTE -->
+            <div class="col-md-5 offset-md-4" style="text-align: end;  padding-right: 135px;">
+                <span class="home-header-icon-span">
+                    <a class="home-header-icon-a" target="_blank" href="https://facebook.com/" title="Facebook">
+                        <i class="fa fa-facebook"></i></a>
+                </span>
+                <span class="home-header-icon-span">
+                    <a class="home-header-icon-a" target="_blank" href="https://facebook.com/" title="Facebook">
+                        <i class="fa fa-twitter"></i></a>
+                </span>
+                <span class="home-header-icon-span">
+                    <a class="home-header-icon-a" target="_blank" href="https://facebook.com/" title="Facebook">
+                        <i class="fa fa-google-plus"></i></a>
+                </span>
+
+                <button mat-button
+                    style=" position: relative;background-color: #50b9ce !important;color: white;border-radius: 0px;font-size: 14px !important;
+                font-weight: bold;text-transform: uppercase;float: right;width: 228px;text-align: center;height: 100%;">REQUEST A
+                    QUOTE</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div style="background: #fff;">
+
+    <div>
+        <!-- TITLE LOGO, CALL US AND MENU BAR -->
+        <div class="row" style="margin-right: -15px;margin-left: -15px;     padding-left: 85px;">
+
+            <!-- HENNEX TITLE -->
+            <div class="col-md-3" style="display: inline-flex;     align-self: center;">
+                <img src="./assets/van_logo.png" alt="">
+                <span style="font-weight: bold;  color: #2c3740;">
+                    <p style="margin-bottom: 3px;font-size: 30px;">HENNEX CORGO</p>
+                    <p style="margin-bottom: 0px;font-size: 20px;font-weight: 400;">LOGISTICS & TRANSPORT</p>
+                </span>
+            </div>
+
+            <!-- CALL US AT, PHONE NUMBER AND MENU BAR -->
+            <div class="col-md-9 justify-content-end">
+
+                <!-- CALL US AT -->
+                <div class="row" style="margin-top: 15px;margin-bottom: 15px; padding-right: 120px;">
+                    <div class="col-md" style="display: inline-flex;align-items: center; justify-content: flex-end;">
+
+                        <!-- Call us at -->
+                        <img style="margin-left: 10px;margin-right: 10px;" src="./assets/iphone.png" alt="">
+                        <!-- style=" font-size: 13px;color: #2c3740;font-weight: 500;color: #2c3740;  border-right: groove;padding-right: 20px; border-right-width: 1px;" -->
+                        <span style=" font-size: 13px;color: #2c3740;font-weight: 500; padding-right: 15px; ">
+                            <p style="margin-bottom: 0px;">CALL US NOW FOR</p>
+                            <p style="margin-bottom: 0px;">YOUR TRANSPORT</p>
+                        </span>
+
+                        <!-- phone number -->
+                        <span style="margin-left: 20px;margin-right: 20px;">
+                            <a style="font-size: 30px;font-weight: bold; color: #2c3740;line-height: 1;
+                              cursor: pointer;text-decoration: none;background-color: transparent;"
+                                href="tel:9888888888">988 888 8888</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- MENU BAR -->
+                <div class="row">
+                    <div class="col-md" style="align-self: center; ">
+                        <section style="text-align: end;" style="background: #314555; float: right; ">
+                            <button class="home-menu-button" mat-button  routerLink='/home'>HOME</button>
+                         
+
+
+                            <button class="home-menu-button" mat-button [matMenuTriggerFor]="about_us">ABOUT US</button>
+                            <mat-menu #about_us="matMenu" yPosition="below">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+
+
+                            <button class="home-menu-button" mat-button
+                                [matMenuTriggerFor]="services_menu">SERVICES</button>
+                            <mat-menu #services_menu="matMenu" yPosition="below">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+
+                            <button class="home-menu-button" mat-button
+                                [matMenuTriggerFor]="location_menu">LOCATION</button>
+                            <mat-menu #location_menu="matMenu" yPosition="below">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+
+                            <button class="home-menu-button" mat-button [matMenuTriggerFor]="contact_menu">Contact
+                                US</button>
+                            <mat-menu #contact_menu="matMenu" yPosition="below">
+                                <button mat-menu-item>Item 1</button>
+                                <button mat-menu-item>Item 2</button>
+                            </mat-menu>
+
+                            <button class="home-menu-button" mat-button routerLink='/tracking'>Live Tracking</button>
+
+
+                            <button class="home-menu-button-2" mat-button routerLink='/sign-in'>SIGN
+                                IN</button>
+
+                            <span style="padding-right: 350px;"></span>
+                        </section>
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="bg-tracking">
+    <!-- BIG PARAGRAPH ABOUT US -->
+    <div class="row">
+        <div class="col-md-6" style="margin-left: 85px;margin-top: 8%;">
+            <span
+                style="font-size: 25px;font-weight: bold;background-color: white;height: 40px;padding: 5px 15px 5px 15px;color: #2c3740;">
+                HENNEX CARGO</span>
+
+            <p style="font-size: 45px;font-weight: bold;margin: 25px 0px;">ONE STOP SOLUTION</p>
+            <p style="font-size: 45px;font-weight: bold;margin: 25px 0px;">FOR YOUR CARGO AND </p>
+            <p style="font-size: 45px;font-weight: bold;margin: 25px 0px;">TRANSPORT REQUIREMENTS</p>
+
+
+            <section>
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style"
+                    style="font-size: 16px !important;font-weight: bold;text-transform: uppercase;">
+                    <mat-button-toggle style="background-color: #50b9ce !important;color: white;width: 150px;">OUR
+                        SERVICES</mat-button-toggle>
+                    <mat-button-toggle routerLink='tracking'
+                        style="background-color: #50b9ce !important;color: white;width: 150px;">
+                        GO TO TRACKING</mat-button-toggle>
+
+                </mat-button-toggle-group>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- <div class="row" style="margin-top: 140px;">
+        <div class="col-md-12" style="margin-left: 85px;">
+            <section>
+                <p style="font-size: 35px;font-weight: bold;margin: 25px 0px;">Track and Trace</p>
+                <div class="input-group input-group-lg " style="width: 80%; margin-top: 25px;">
+                    <input type="text" class="form-control" placeholder="Enter your Tracking No."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" style="    width: 200px;background-color: #50b9ce !important;color: white" id="button-addon2">Track</button>
+                </div>
+            </section>
+
+        </div>
+    </div> -->
+
+</div>
+
+<div>
+    <div class="row">
+        <div class="col-md-6" style="margin-left: 85px;">
+            <h3 style="font-size: 20px;margin-top: 25px;margin-bottom: 10px;color: #2c3740;">
+                LOGISTICS SERVICE</h3>
+            <h6 style="font-size: 40px;font-weight: bold;margin: 10px 0px 10px 0px;color: #2c3740;">
+                OUR SERVICES </h6>
+        </div>
+
+        <div class="col-md-12" style="padding-left: 85px;">
+
+            <p style="text-align: center;margin-top: 5%;margin-bottom: 5%;">CONTENTS</p>
+            <hr>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-md-6" style="margin-left: 85px;">
+            <h3 style="font-size: 20px;margin-top: 25px;margin-bottom: 10px;color: #2c3740;">
+                LOGISTICS SERVICE</h3>
+            <h6 style="font-size: 40px;font-weight: bold;margin: 10px 0px 10px 0px;color: #2c3740;">
+                OUT CLIENTS </h6>
+        </div>
+
+        <div class="col-md-12" style="padding-left: 85px;">
+
+            <p style="text-align: center;margin-top: 5%;margin-bottom: 5%;">CONTENTS</p>
+            <hr>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-md-6" style="margin-left: 85px;">
+            <h3 style="font-size: 20px;margin-top: 25px;margin-bottom: 10px;color: #2c3740;">
+                LOGISTICS SERVICE</h3>
+            <h6 style="font-size: 40px;font-weight: bold;margin: 10px 0px 10px 0px;color: #2c3740;">
+                TESTIMONIALS </h6>
+        </div>
+
+        <div class="col-md-12" style="padding-left: 85px;">
+
+            <p style="text-align: center;margin-top: 5%;margin-bottom: 5%;">CONTENTS</p>
+            <hr>
+        </div>
+    </div>
+</div>

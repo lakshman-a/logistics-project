@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from './config/config.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'logistics-app';
+  users: any[] = [];
+  constructor(private dataService: ConfigService) { }
+
+  ngOnInit() {
+
+    this.dataService.sendGetRequest().subscribe((data: any)=>{
+      console.log(data);
+      this.users = data;
+    })  
+  }
+
 }
