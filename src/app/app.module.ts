@@ -19,13 +19,17 @@ import { TrackingPageComponent } from './pages/tracking-page/tracking-page.compo
 import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { MatCardModule } from '@angular/material/card';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'tracking', component: TrackingPageComponent },
   { path: 'sign-in', component: SignInPageComponent },
   { path: 'sign-up', component: SignUpPageComponent },
+  { path: 'main', component: NavBarComponent },
 ];
 
 @NgModule({
@@ -50,7 +54,11 @@ const routes: Routes = [
     MatIconModule,
     MatButtonToggleModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule,
+    MatSelectModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }

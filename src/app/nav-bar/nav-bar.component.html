@@ -1,1 +1,250 @@
-<router-outlet></router-outlet>
+<mat-toolbar style="height: 45px;">
+
+    <img src="./assets/van_logo.png" alt="" style="height: 20px;">
+    <span style="font-weight: bold;  color: #2c3740;font-size: 18px;">HENNEX CORGO
+    </span>
+
+    <span style="flex: 1 1 auto;"></span>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+
+
+    <button mat-icon-button>
+        <i style="font-size: 18px;" class="fa fa-bell-o" aria-hidden="true"></i>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="usermenu">
+        <i style="font-size: 18px;" class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <span style="    margin: 0px 5px 0px 5px;">Guest</span>
+
+        <mat-menu #usermenu="matMenu">
+            <button mat-menu-item>Profile</button>
+            <button mat-menu-item>Balances</button>
+            <button mat-menu-item>Log out</button>
+        </mat-menu>
+    </button>
+</mat-toolbar>
+
+<!-- Side Nav -->
+<mat-drawer-container style="height: 100%;">
+    <!-- Left Nav bar -->
+    <mat-drawer mode="side" opened style="width: 180px;">
+        <mat-selection-list #navs [multiple]="false">
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-line-chart" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Dashboard</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="orderssubmenu">
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Orders</span>
+                </span>
+            </mat-list-option>
+            <mat-menu #orderssubmenu="matMenu">
+                <button style="font-size: 17px;font-weight: 100;" mat-menu-item>Order Sub-Menu 1</button>
+                <button style="font-size: 17px;font-weight: 100;" mat-menu-item>Order Sub-Menu 2</button>
+                <button style="font-size: 17px;font-weight: 100;" mat-menu-item>Order Sub-Menu 3</button>
+            </mat-menu>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-mail-reply-all" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Returns</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-truck" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Shipment</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Tracking</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-user-o" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Customers</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-money" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Billing</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-wrench" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Tools</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-share-alt" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Channels</span>
+                </span>
+            </mat-list-option>
+            <mat-list-option>
+                <span>
+                    <i style="font-size: 17px;" class="fa fa-cogs" aria-hidden="true"></i>
+                    <span style="font-size: 17px;font-weight: 100;margin: 0px 5px 0px 10px;">Settings</span>
+                </span>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <!-- Main Content -->
+    <mat-drawer-content>
+
+        <!-- Tool bar -->
+        <mat-toolbar style="height: 50px; background-color: white;">
+
+            <i style="font-size: 25px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span style="color: #2c3740;font-size: 20px;margin: 0px 10px 0px 10px;">Orders</span>
+
+            <span style="flex: 1 1 auto;"></span>
+
+            <button mat-stroked-button>
+                <i style="font-size: 18px;" class="fa fa-plus-square-o" aria-hidden="true"></i>
+                <span style=" margin: 0px 5px 0px 5px;">Add Order</span>
+            </button>
+
+            <button mat-icon-button>
+                <i style="font-size: 18px;" class="fa fa-refresh" aria-hidden="true"></i>
+            </button>
+
+            <button mat-icon-button>
+                <i style="font-size: 18px;" class="fa fa-upload" aria-hidden="true"></i>
+            </button>
+
+
+            <button mat-icon-button>
+                <i style="font-size: 18px;" class="fa fa-download" aria-hidden="true"></i>
+            </button>
+
+
+        </mat-toolbar>
+
+        <div class="row" style="margin: 10px;">
+            <div class="col-9">
+                <mat-card style="padding: 0px;">
+
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    1. Buyer Details
+                                </mat-panel-title>
+                                <!-- <mat-panel-description>
+                                    This is a summary of the content
+                                </mat-panel-description> -->
+
+
+
+
+                            </mat-expansion-panel-header>
+                            <!-- <h3>Buyer Details</h3> -->
+
+                            <div class="row" style="margin-bottom: 15px;">
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail4">Buyer Name</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Buyer Name">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4">Phone Number</label>
+                                    <input type="text" class="form-control" id="inputPassword4"
+                                        placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4">Email ID</label>
+                                    <input type="text" class="form-control" id="inputPassword33"
+                                        placeholder="Email Id">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="City">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Zip">
+                                </div>
+                            </div>
+
+
+
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    2. Order Details
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    3. Pickup Address
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    4. Package Weight
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    5. Other details
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+
+                </mat-card>
+            </div>
+            <div class="col-3">
+                <mat-card>
+                    <h3 style="margin-bottom: 5px;">Add your Buyer details</h3>
+                    <p style="font-size: 12px;">While entering your buyer details, please make sure you are enter the
+                        correct phone number and
+                        emailID. We will use this information in all future communication with your buyer</p>
+                    <h3 style="margin-bottom: 5px;">Enter you Buyer complete address</h3>
+                    <p style="font-size: 12px;">Please enter the correct address of you nuyer here</p>
+                    <p style="font-size: 12px;">Note: Mention the company name if its a B2B Order</p>
+                    <h3 style="margin-bottom: 5px;">Next enter the Billing address</h3>
+                    <p style="font-size: 12px;">While entering your buyer details, please make sure you are enter the
+                        correct phone number and
+                        emailID. We will use this information in all future communication with your buyer</p>
+
+                </mat-card>
+            </div>
+        </div>
+
+    </mat-drawer-content>
+
+</mat-drawer-container>
